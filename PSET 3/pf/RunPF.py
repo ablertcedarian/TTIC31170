@@ -54,3 +54,4 @@ if __name__ == '__main__':
     filename = os.path.basename(sys.argv[1]).split('.')[0] + '_' + str(numParticles) + '_particles'
 
     pf.run(U, Ranges, deltat, X0, XGT, filename)
+    # pf.run2(U, Ranges, deltat, X0, XGT, filename)

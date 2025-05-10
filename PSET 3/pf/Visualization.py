@@ -46,8 +46,8 @@ class Visualization(object):
         (m,n) = gridmap.getShape()
 
         # Set the axis size
-        self.ax.set_xlim(0, n * gridmap.xres, True, False)
-        self.ax.set_ylim(0, m * gridmap.yres, True, False)
+        self.ax.set_xlim(0, n * gridmap.xres, emit=True, auto=False)
+        self.ax.set_ylim(0, m * gridmap.yres, emit=True, auto=False)
 
         for j in range(n):
             for i in range(m):

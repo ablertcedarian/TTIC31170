@@ -28,7 +28,7 @@ class Gridmap(object):
 
         """
         # Flip the occupancy grid so that indexing starts in the lower-left
-        self.occupancy = occupancy[ ::-1,:].astype(np.bool)
+        self.occupancy = occupancy[ ::-1,:].astype(bool)
         self.xres = xres
         self.yres = yres
         self.m = self.occupancy.shape[0]
@@ -59,7 +59,7 @@ class Gridmap(object):
         j = np.asarray(j)
 
         inBounds = (i < self.m) * (i >= 0) * (j < self.n) * (j >= 0)
-        collision = np.ones(i.shape, dtype=np.bool)
+        collision = np.ones(i.shape, dtype=bool)
         collision[inBounds] = self.occupancy[i[inBounds], j[inBounds]]
         return collision
 
